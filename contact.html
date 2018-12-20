@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Grbans Restaurant</title>
     <meta charset="UTF-8">
@@ -23,12 +24,15 @@
         .nav-link {
             font-size: x-large;
         }
+        
         .navLinks:hover {
             color: rgb(0, 137, 197) !important;
         }
+        
         .navLinks {
             color: rgb(150, 231, 255) !important;
         }
+        
         .jumbotron {
             background-image: url('images/');
             background-size: cover;
@@ -36,11 +40,13 @@
             background-attachment: fixed;
             min-height: 100vh;
         }
+        
         #logo {
             width: 150px;
             height: 150px;
             border-radius: 50%;
         }
+        
         #header {
             margin-top: 150px;
             margin-bottom: 50px;
@@ -48,12 +54,12 @@
     </style>
 
 </head>
+
 <body style="background-color:rgb(199, 253, 247);">
 
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <a href="index.html" class="navbar-brand"><img src="images/logo.jpg" id="logo" alt="logo" class="img-fluid" /></a>
-        <button type="button" class="navbar-toggler navbar-toggler-right " data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expended="false"
-                aria-label="Toggle navigation">
+        <button type="button" class="navbar-toggler navbar-toggler-right " data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expended="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav" style="margin-top:-100px;">
@@ -65,7 +71,8 @@
                     <a href="menu.html" class="nav-link"><span class="navLinks"><i class="fa fa-glass mx-1"></i>Menu</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link"><span class="navLinks"><i class="fa fa-address-book mx-1"></i>Contact & Place</span></a>
+                    <a href="contact.html" class="nav-link"><span class="navLinks"><i class="fa fa-address-book mx-1"></i>Contact
+                            & Place</span></a>
                 </li>
                 <li class="nav-item">
                     <a href="feedback.html" class="nav-link"><span class="navLinks"><i class="fa fa-comments mx-1"></i>Feedback</span></a>
@@ -73,37 +80,111 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="log.html" class="nav-link"><span class="navLinks"><i class="fa fa-user-plus mx-2"></i>Register</span></a>
+                    <a href="#" data-toggle="modal" data-target="#modal" class="nav-link"><span class="navLinks"><i
+                                class="fa fa-sign-in mx-2"></i>Register</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="log.html" class="nav-link"><span class="navLinks"><i class="fa fa-sign-in mx-2"></i></span></a>
+                    <a href="#" data-toggle="modal" data-target="#modalLog" class="nav-link"><span class="navLinks"><i
+                                class="fa fa-sign-in mx-2"></i>Login</span></a>
                 </li>
             </ul>
         </div>
     </nav>
-    
+
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"><img src="images/logo.jpg" width="150" height="150" alt="logo" /><label class="h2 text-primary">Create an account</label></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xs-12">
+                        <input type="text" placeholder="Fist name..." class="form-control" style="max-width:400px;" required /><br />
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="text" placeholder="Last name..." class="form-control" style="max-width:400px;" required /><br />
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="email" placeholder="you@example.com" class="form-control" style="max-width:400px;" required /><br />
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" style="max-width:400px;" required placeholder="Enter your password" /><br />
+                    </div>
+                    <div class="col-xs-12  offset-4">
+                        <input type="submit" class="btn btn-success" value="Sign up for free" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"><img src="images/logo.jpg" width="150" height="150" alt="logo" /><label class="h2 text-primary">Login</label></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xs-12">
+                        <input type="email" placeholder="you@example.com" class="form-control" style="max-width:400px;" required /><br />
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" style="max-width:400px;" required placeholder="Enter your password" /><br />
+                    </div>
+                    <div class="col-xs-12  offset-4">
+                        <input type="submit" class="btn btn-success" value="Login" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section>
         <div class="row no-gutters">
             <div class="col-12">
                 <h2 class="display-4 text-center text-primary" id="header">CONTACT & LOCATION</h2>
             </div>
-            <div class="col-12 text-center" >
-                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11513.04872439917!2d18.34079575!3d43.829661449999996!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sba!4v1518959248651" width="600" height="450" frameborder="0" style="border:0; border-radius:5%;" allowfullscreen></iframe>
+            <div class="col-12 text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11513.04872439917!2d18.34079575!3d43.829661449999996!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sba!4v1518959248651" width="600" height="450" frameborder="0" style="border:0; border-radius:5%;"
+                    allowfullscreen></iframe>
             </div>
             <div class="col-12">
                 <h3 class="text-center text-primary">CONTACT:</h3>
             </div>
             <div class="col-2 offset-5">
                 <span style="margin-right:80px;">Restaurant:</span><br />
-                <span style="margin-right:133px;">Sef:</span><br />
+
                 <span style="margin-right:117px;">Email:</span>
             </div>
             <div class="col-4">
-                <i class="fa fa-phone fa-fw" aria-hidden="true"></i><a href="tel:+38761091675">(061) 091-675</a><br>
-                <i class="fa fa-phone fa-fw" aria-hidden="true"></i><a href="tel:+38761091675">(061) 091-675</a><br>
-                <i class="fa fa-inbox fa-fw" aria-hidden="true"></i><a href="mailto:info@cameo.com">abud_almonajed@hotmail.com</a>
+                <i class="fa fa-phone fa-fw" aria-hidden="true"></i><a href="tel:+38761091675" style="text-decoration: none">(061)
+                    826-366</a><br>
+
+                <i class="fa fa-inbox fa-fw" aria-hidden="true"></i><a href="mailto:grbo_nedzad@hotmail.com" style="text-decoration: none">grbo_nedzad@hotmail.com</a>
             </div>
         </div>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>

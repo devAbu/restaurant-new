@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Grbans Restaurant</title>
     <meta charset="UTF-8">
@@ -23,12 +24,15 @@
         .nav-link {
             font-size: x-large;
         }
+        
         .navLinks:hover {
             color: rgb(0, 137, 197) !important;
         }
+        
         .navLinks {
             color: rgb(150, 231, 255) !important;
         }
+        
         .jumbotron {
             background-image: url('images/right.jpg');
             background-size: cover;
@@ -36,10 +40,11 @@
             background-attachment: fixed;
             min-height: 100vh;
         }
+        
         #logo {
             width: 150px;
-            height:150px;
-            border-radius:50%;
+            height: 150px;
+            border-radius: 50%;
         }
     </style>
 
@@ -56,8 +61,7 @@
 
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <a href="index.html" class="navbar-brand"><img src="images/logo.jpg" id="logo" alt="logo" class="img-fluid" /></a>
-        <button type="button" class="navbar-toggler navbar-toggler-right " data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expended="false"
-                aria-label="Toggle navigation">
+        <button type="button" class="navbar-toggler navbar-toggler-right " data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expended="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav" style="margin-top:-100px;">
@@ -69,7 +73,8 @@
                     <a href="menu.html" class="nav-link"><span class="navLinks"><i class="fa fa-glass mx-1"></i>Menu</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link"><span class="navLinks"><i class="fa fa-address-book mx-1"></i>Contact & Place</span></a>
+                    <a href="contact.html" class="nav-link"><span class="navLinks"><i class="fa fa-address-book mx-1"></i>Contact
+                            & Place</span></a>
                 </li>
                 <li class="nav-item">
                     <a href="feedback.html" class="nav-link"><span class="navLinks"><i class="fa fa-comments mx-1"></i>Feedback</span></a>
@@ -77,14 +82,17 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="log.html" class="nav-link"><span class="navLinks"><i class="fa fa-user-plus mx-2"></i>Register</span></a>
+                    <a href="#" data-toggle="modal" data-target="#modal" class="nav-link"><span class="navLinks"><i
+                                class="fa fa-sign-in mx-2"></i>Register</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" data-toggle="modal" data-target="#modal" class="nav-link"><span class="navLinks"><i class="fa fa-sign-in mx-2"></i>Login</span></a>
+                    <a href="#" data-toggle="modal" data-target="#modalLog" class="nav-link"><span class="navLinks"><i
+                                class="fa fa-sign-in mx-2"></i>Login</span></a>
                 </li>
             </ul>
         </div>
     </nav>
+
 
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
@@ -96,7 +104,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="col-xs-12" >
+                    <div class="col-xs-12">
                         <input type="text" placeholder="Fist name..." class="form-control" style="max-width:400px;" required /><br />
                     </div>
                     <div class="col-xs-12">
@@ -106,10 +114,39 @@
                         <input type="email" placeholder="you@example.com" class="form-control" style="max-width:400px;" required /><br />
                     </div>
                     <div class="col-xs-12">
-                        <input type="password" class="form-control" style="max-width:400px;" required /><br />
+                        <input type="password" class="form-control" style="max-width:400px;" required placeholder="Enter your password" /><br />
                     </div>
                     <div class="col-xs-12  offset-4">
                         <input type="submit" class="btn btn-success" value="Sign up for free" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"><img src="images/logo.jpg" width="150" height="150" alt="logo" /><label class="h2 text-primary">Login</label></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xs-12">
+                        <input type="email" placeholder="you@example.com" class="form-control" style="max-width:400px;" required /><br />
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" style="max-width:400px;" required placeholder="Enter your password" /><br />
+                    </div>
+                    <div class="col-xs-12  offset-4">
+                        <input type="submit" class="btn btn-success" value="Login" />
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -186,7 +223,9 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
 
                     <p class="h6">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                        with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
@@ -199,13 +238,13 @@
     <div class="container-fluid">
         <div class="row no-gutters">
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-xl-3  mb-sm-2">
-                <img src="images/rest6.jpg" alt="left image" class="img-fluid" style="width:300px; height:180px;"  />
+                <img src="images/rest6.jpg" alt="left image" class="img-fluid" style="width:300px; height:180px;" />
             </div>
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-xl-3 mb-sm-2">
-                <img src="images/rest5.jpg" alt="left image" class="img-fluid"  />
+                <img src="images/rest5.jpg" alt="left image" class="img-fluid" />
             </div>
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-xl-3 mb-sm-2">
-                <img src="images/rest4.jpg" alt="left image" class="img-fluid"  />
+                <img src="images/rest4.jpg" alt="left image" class="img-fluid" />
             </div>
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-xl-3 mb-sm-2">
                 <img src="images/rest3.jpg" alt="left image" class="img-fluid " id="4" style="width:300px; height:180px;" />
@@ -218,15 +257,16 @@
                 <img src="images/rest2.jpg" alt="left image" class="img-fluid" style="width:300px; height:180px;" />
             </div>
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-5 offset-lg-2 offset-xl-0">
-                <img src="images/rest1.jpg" alt="left image" class="img-fluid" style="width:300px; height:180px;"/>
+                <img src="images/rest1.jpg" alt="left image" class="img-fluid" style="width:300px; height:180px;" />
             </div>
         </div>
     </div>
 
 
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

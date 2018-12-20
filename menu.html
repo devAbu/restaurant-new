@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Grbans Restaurant</title>
     <meta charset="UTF-8">
@@ -21,12 +22,15 @@
         .nav-link {
             font-size: x-large;
         }
+        
         .navLinks:hover {
             color: rgb(0, 137, 197) !important;
         }
+        
         .navLinks {
             color: rgb(150, 231, 255) !important;
         }
+        
         .jumbotron {
             background-image: url('images/food.jpg');
             background-size: cover;
@@ -34,16 +38,19 @@
             background-attachment: fixed;
             min-height: 100vh;
         }
+        
         #logo {
             width: 150px;
             height: 150px;
-            border-radius:50%;
+            border-radius: 50%;
         }
+        
         #submit:hover {
             background-color: rgb(162, 110, 59) !important;
         }
+        
         #submit {
-            margin-top:-150px !important;
+            margin-top: -150px !important;
             width: 300px;
         }
     </style>
@@ -62,8 +69,7 @@
 
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <a href="index.html" class="navbar-brand"><img src="images/logo.jpg" id="logo" alt="logo" class="img-fluid" /></a>
-        <button type="button" class="navbar-toggler navbar-toggler-right " data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expended="false"
-                aria-label="Toggle navigation">
+        <button type="button" class="navbar-toggler navbar-toggler-right " data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expended="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav" style="margin-top:-100px;">
@@ -75,7 +81,8 @@
                     <a href="menu.html" class="nav-link"><span class="navLinks"><i class="fa fa-glass mx-1"></i>Menu</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link"><span class="navLinks"><i class="fa fa-address-book mx-1"></i>Contact & Place</span></a>
+                    <a href="contact.html" class="nav-link"><span class="navLinks"><i class="fa fa-address-book mx-1"></i>Contact
+                            & Place</span></a>
                 </li>
                 <li class="nav-item">
                     <a href="feedback.html" class="nav-link"><span class="navLinks"><i class="fa fa-comments mx-1"></i>Feedback</span></a>
@@ -83,14 +90,81 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="log.html" class="nav-link"><span class="navLinks"><i class="fa fa-user-plus mx-2"></i>Register</span></a>
+                    <a href="#" data-toggle="modal" data-target="#modal" class="nav-link"><span class="navLinks"><i
+                                class="fa fa-sign-in mx-2"></i>Register</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="log.html" class="nav-link"><span class="navLinks"><i class="fa fa-sign-in mx-2"></i>Login</span></a>
+                    <a href="#" data-toggle="modal" data-target="#modalLog" class="nav-link"><span class="navLinks"><i
+                                class="fa fa-sign-in mx-2"></i>Login</span></a>
                 </li>
             </ul>
         </div>
     </nav>
+
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"><img src="images/logo.jpg" width="150" height="150" alt="logo" /><label class="h2 text-primary">Create an account</label></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xs-12">
+                        <input type="text" placeholder="Fist name..." class="form-control" style="max-width:400px;" required /><br />
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="text" placeholder="Last name..." class="form-control" style="max-width:400px;" required /><br />
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="email" placeholder="you@example.com" class="form-control" style="max-width:400px;" required /><br />
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" style="max-width:400px;" required placeholder="Enter your password" /><br />
+                    </div>
+                    <div class="col-xs-12  offset-4">
+                        <input type="submit" class="btn btn-success" value="Sign up for free" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"><img src="images/logo.jpg" width="150" height="150" alt="logo" /><label class="h2 text-primary">Login</label></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xs-12">
+                        <input type="email" placeholder="you@example.com" class="form-control" style="max-width:400px;" required /><br />
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" style="max-width:400px;" required placeholder="Enter your password" /><br />
+                    </div>
+                    <div class="col-xs-12  offset-4">
+                        <input type="submit" class="btn btn-success" value="Login" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section>
         <div class="row no-gutters">
@@ -112,9 +186,9 @@
                 <img class="img-fluid" src="images/food.jpg" alt="food" width="200" height="150" style="border-radius:20%;" />
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-4">
-                <select class="form-control" style="max-width:300px;">
+                <select class="form-control" style="max-width:300px;" id="food">
                     <option>
-                        Select food 
+                        Select food
                     </option>
                     <option>
                         Hamburger
@@ -142,7 +216,7 @@
                 <img class="img-fluid" src="images/drinks.jpeg" alt="food" width="200" height="150" style="border-radius:20%;" />
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-4">
-                <select class="form-control" style="max-width:300px;">
+                <select class="form-control" style="max-width:300px;" id="drink">
                     <option>
                         Select drink
                     </option>
@@ -169,24 +243,30 @@
         </div><br />
     </section>
 
+
     <section id="card">
         <div class="container-fluid">
             <div class="row no-gutters">
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-                    <img src="images/card.jpg" alt="Credit card" style="border-radius:20%;" width="300" height="300" class="img-fluid"/>
-                </div> 
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-4 my-5">
-                    <input type="text" class="form-control" style="max-width:300px;"  placeholder="Enter your name..." />
+                    <img src="images/card.jpg" alt="Credit card" style="border-radius:20%;" width="300" height="300" class="img-fluid" />
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-4 my-5">
-                    <input type="number" class="form-control" style="max-width:300px;"  placeholder="Credit card number..." />
+                    <input type="text" class="form-control" style="max-width:300px;" placeholder="Enter your name..." />
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-4 my-5">
+                    <input type="number" class="form-control" style="max-width:300px;" placeholder="Credit card number..." />
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-4 offset-xl-6">
-                    <input type="button" class="btn btn-outline-info btn-lg" id="submit" style="color:white; border:white solid 1px;" value="Submit"  />
+                    <input type="button" class="btn btn-outline-info btn-lg" id="submit" style="color:white; border:white solid 1px;" value="Submit" />
                 </div>
             </div>
         </div>
     </section>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
